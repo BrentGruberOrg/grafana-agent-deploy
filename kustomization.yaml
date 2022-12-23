@@ -1,0 +1,16 @@
+resources:
+  - doppler-secret.yaml
+  - namespace.yaml
+  - cluster-role-binding.yaml
+  - cluster-role.yaml
+  - grafana-agent.yaml
+  - service-account.yaml
+
+helmChartInflationGenerator:
+  - chartRepoUrl: https://grafana.github.io/helm-charts
+    chartHome: grafana
+    chartName: grafana-agent-operator
+    releaseName: gf-agent
+    releaseNamespace: grafana
+
+namespace: grafana
